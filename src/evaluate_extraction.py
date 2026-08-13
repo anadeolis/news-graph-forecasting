@@ -1,4 +1,4 @@
-"""Stage 3E: score both extractors against the hand-labeled headlines.
+"""Score both extractors against the hand-labeled headlines.
 
 Scoring is at the headline level: did the extractor detect a relationship in
 this headline, and if so, is the relation type right? Firm-level matching is
