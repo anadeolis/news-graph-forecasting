@@ -1,6 +1,6 @@
-"""Rule-based relation extractor (the "homemade" one).
+"""Rule-based relation extractor ("homemade").
 
-Reads the article table from stage 2 and emits firm-to-firm edges using
+Reads the article table and emits firm-to-firm edges using
 hand-written rules: a junk filter, a company-name dictionary, and keyword
 patterns per relation type.
 
