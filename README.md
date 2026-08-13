@@ -1,8 +1,8 @@
 # News knowledge graphs for multi-firm return forecasting
 
-Research project studying whether knowledge graphs built from financial news —
+Research project studying whether knowledge graphs built from financial news:
 firm-to-firm relationships (supplier, customer, competitor, acquisition,
-partnership) extracted with an LLM — improve return forecasting across many
+partnership) extracted with an LLM improve return forecasting across many
 firms, beyond what sector labels or return correlations already provide.
 
 Reference: Capponi, Sidaoui & Zou, *Graph Machine Learning for Asset Pricing:
