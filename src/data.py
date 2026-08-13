@@ -22,7 +22,7 @@ PROCESSED = ROOT / "data" / "processed"
 
 
 def load_matrix(variable: str) -> pd.DataFrame:
-    """Load one of the professor's matrix files as a dates x tickers DataFrame.
+    """Load one of the matrix files as a dates x tickers DataFrame.
 
     The raw file has tickers as rows and day columns named like 'X20000103',
     so the date is embedded in each column name.
