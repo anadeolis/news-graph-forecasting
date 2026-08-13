@@ -1,0 +1,16 @@
+id,date,title,universe_tickers,label,reason
+31,9/16/10,IBM Acquires OpenPages - Analyst Blog,"DUK,MO",acquisition: IBM-OpenPages,"relation explicit in headline; tagged tickers (DUK,MO) are wrong - tags lie"
+32,3/6/13,3 Sector ETFs Outpacing Larger Rivals,"JNJ,MRK",none,"'rivals' refers to ETFs, keyword trap"
+33,6/6/13,UPDATE: PepsiCo Reportedly in Talks to Acquire SodaStream for as Much as $95/Share -Calcalist,"KO,PEP",acquisition: PEP-SodaStream,'in talks to acquire' - reported deal; KO tagged but not in headline
+34,5/12/15,Jefferies: Danaher has upper hand to acquire Pall,"DHR,TMO",acquisition: DHR-Pall,"analyst-speculated deal; policy call: keep reported/rumored M&A, flag as rumor"
+35,11/16/15,Mid-Morning Market Update: Markets Edge Higher; Marriott To Acquire Starwood Hotels For $12.2B,"MAR,ORCL",acquisition: MAR-Starwood,explicit deal with value; ORCL tag irrelevant
+36,3/2/16,CSX Gains 5% On Takeover Reports,"CSX,NSC",none,takeover rumor but counterparty unnamed - cannot form an edge with one firm
+37,7/19/16,Netflix Price Target Cut; Yahoo Raised; Tesla Partner Started At Neutral,"HAL,SLB",none,'Partner' is part of a name/roundup; keyword trap
+38,7/20/16,Consumer product giants eye disruption after Dollar Shave Club buyout,"CL,KMB",none,"buyout is Unilever-DollarShaveClub, neither named; tagged firms are bystander competitors"
+39,10/31/16,Baker Hughes Reverses Sharply On Merger With GE Oil Unit,"HAL,SLB",acquisition: GE-BakerHughes,merger of GE oil unit with Baker Hughes stated; HAL/SLB tags are peers
+40,5/15/17,"13F from Cooperman's Omega Shows New Stakes in Alcoa, Ally Financial, AMC Networks, Athene, Cliffs, Foundation Building Materials, Foot Locker, Keane, Hi-Crush Partners, Humana","AA,HUM",none,"13F stakes = share purchases, not acquisitions; classic 'buys' trap"
+41,5/7/18,McKesson To Acquire MSD For Medical Supply Distribution,"BAX,MCK,TMO",acquisition: MCK-MSD,"explicit acquisition; MSD outside universe, recorded anyway"
+42,9/20/18,Wall Street Breakfast: Sky Takeover Settled By Rare Auction,"JPM,KR",none,"Sky takeover, buyer unnamed in headline; tagged firms unrelated"
+43,10/30/18,Jubilant FoodWorks Announces PepsiCo as New Beverage Partner for Domino's Pizza in India; Ends 20-Year Partnership with Coca-Cola,"KO,PEP",partnership: PEP-JubilantFoodWorks,"new partnership stated; ALSO ends KO-JubilantFoodWorks partnership - one headline, two edges"
+44,11/20/18,Tech Slump Submerges Stocks In Red Sea (Wall Street Breakfast Podcast),"BSX,KR,KSS,LOW,MCK,TJX",none,podcast roundup
+45,1/29/20,"Coho Partners, Ltd. Buys Omnicom Group Inc, Altria Group Inc, Colgate-Palmolive Co, Sells ...","CL,USB",none,13F: fund buys/sells

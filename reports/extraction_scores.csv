@@ -1,0 +1,7 @@
+extractor,panel,found,TP,FP,FN,precision,recall,f1,type correct
+rules,random 30,0,0,0,0,,,0.0,-
+rules,keyword 15,0,0,0,7,,0.0,0.0,-
+rules,all 45,0,0,0,7,,0.0,0.0,-
+llm,random 30,0,0,0,0,,,0.0,-
+llm,keyword 15,7,7,0,0,1.0,1.0,1.0,7/7
+llm,all 45,7,7,0,0,1.0,1.0,1.0,7/7

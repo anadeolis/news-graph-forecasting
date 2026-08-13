@@ -1,0 +1,31 @@
+id,date,title,universe_tickers,label,reason
+1,1/21/11,Capital One Outshines - Analyst Blog,"AXP,COF",none,single-firm analyst opinion; no second firm named in headline
+2,6/8/11,Medtronic Is Shocking Under The Hood (MDT),"BSX,MDT",none,single-firm piece; BSX tagged but absent from headline
+3,12/22/11,Under The Hood: A Look At The New/Old Oil Services ETF,"HAL,RIG,SLB",none,"ETF overview, not a firm-to-firm relation"
+4,7/17/12,Earnings Scheduled For July 17,"CSX,JNJ,KO",none,earnings calendar listing
+5,1/4/13,"Benzinga Market Primer, Friday, January 4: Non-Farm Payrolls Edition","CCL,MMM,NEM",none,market primer roundup
+6,3/15/13,"The Week Ahead: Earnings from General Mills, Oracle","FDX,GIS,ORCL",none,earnings calendar listing
+7,2/6/14,"#PreMarket Primer: Thursday, February 6: Markets Taking A Breather After Twitter Earnings","KO,MRK",none,market primer roundup
+8,4/21/14,"Accountability For The Deepwater Horizon Spill And The Gulf, 4 Years Later","HAL,RIG",none,"both firms tied to Deepwater Horizon event, but no relation stated in headline"
+9,5/16/16,"Earnings: It's True, We're All Updating Our Homes, Says HD","HD,LOW",none,HD earnings story; LOW tagged as peer only
+10,6/27/16,"Benzinga's M&A Chatter for Monday June 27, 2016","MAR,MDT",none,"M&A roundup, no specific deal in headline"
+11,8/11/16,"The Market In 5 Minutes: Valeant's Fraud, Macy's Beat, And Arianna's Departure","BMY,HUM,KSS",none,market recap roundup
+12,12/2/16,The 5 Best Stocks In Each Sector Since The Election,"FCX,HUM,KR,KSS",none,stock list
+13,8/15/17,"Sterling Capital Management LLC Buys HCA Healthcare Inc, McKesson Corp, Dollar General Corp, ...","MCK,OXY",none,"13F: fund buying shares, not firm acquiring firm"
+14,10/20/17,"Bank Stock Roundup: Q3 Earnings Impress, BofA, PNC Financial Beat Estimates","COF,USB",none,sector earnings roundup
+15,1/19/18,"Schlumberger's (SLB) Q4 Earnings Beat Estimates, Up Y/Y","HAL,SLB",none,single-firm earnings; HAL tagged as peer only
+16,9/21/18,Should You Invest in the Fidelity MSCI Utilities Index ETF (FUTY)?,"D,DUK",none,ETF piece
+17,10/30/18,"Farmers & Merchants Investments Inc Buys Illinois Tool Works Inc, Walgreens Boots Alliance ...","ITW,WMB",none,13F: fund portfolio buys
+18,11/26/18,Wall Street Breakfast: Futures Rebound After Black Friday Losses,"HAL,SLB",none,market recap roundup
+19,11/28/18,Norfolk Southern: Is This As Good As It Gets?,"CSX,NSC",none,single-firm opinion; CSX tagged as peer only
+20,1/18/19,"Regions Financial's (RF) Q4 Earnings Improve Y/Y, Costs Down","JPM,USB",none,"story about Regions Financial, not the tagged firms"
+21,5/3/19,"Palladium Partners Llc Buys AutoZone Inc, Adobe Inc, Cigna Corp, Sells Cigna Corp, iShares Edge ...","AZO,CI",none,13F: fund portfolio buys/sells
+22,6/14/19,"Shares of several semiconductor companies are trading lower after weak quarterly results from Broadcom, citing ""broad-based"" demand weakness and the U.S. crackdown on Huawei.","MU,TXN,WDC",none,sector co-movement after Broadcom results; no bilateral relation stated
+23,6/17/19,McCarter & English Joins Blockchain In Transport Alliance,"FDX,IBM",none,law firm joins alliance; no relation between tagged firms stated
+24,6/30/19,The Dividend Kings Ranked By Quality Score,"CL,EMR,LOW",none,dividend ranking list
+25,7/25/19,"The Daily Biotech Pulse: Setback For Bristol-Myers Squibb, Gemphire Explodes, Lilly's Nasal Low Blood Sugar Drug","BAX,BMY,LLY",none,biotech news roundup
+26,10/11/19,Repo Markets Still Spooky,"BK,JPM",none,macro/markets piece
+27,10/21/19,10 Biggest Price Target Changes For Monday,"IBM,SLB",none,price-target roundup
+28,10/28/19,ClearBridge Multi Cap Growth Strategy Portfolio Manager Commentary Q3 2019,"FCX,OXY,WDC",none,fund manager commentary
+29,2/24/20,21 Basic Materials Stocks Moving In Monday's Pre-Market Session,"FCX,NEM",none,movers list
+30,4/7/20,Will The Remote Office Become Habit After The Coronavirus Pandemic?,"AXP,BAC,IBM,UNH",none,thematic thinkpiece; tagged firms are examples
