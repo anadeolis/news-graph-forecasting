@@ -81,7 +81,7 @@ def candidates() -> pd.DataFrame:
     """Headlines worth sending to the LLM.
 
     Two filters, in order. FNSPID's ticker tags narrow 517k articles to the
-    24,358 tagged with 2+ universe firms — but 79% of those never name a
+    24,358 tagged with 2+ universe firms, but 79% of those never name a
     universe firm in the headline text, because the tags are attached
     loosely. Requiring the name to appear in the text drops the pool to
     ~5,200 and cuts the API bill by the same proportion.
@@ -136,9 +136,6 @@ def extract_batch(client: Anthropic, headlines: list[str]) -> list[dict]:
 
 def run(limit: int | None = None, seed: int = 0) -> None:
     """Extract relations. limit=N runs a random N-headline pilot.
-
-    The pilot samples at random rather than taking the first N, which would
-    only cover 2009-2010 — the thinnest years of news coverage.
     """
     if not os.environ.get("ANTHROPIC_API_KEY"):
         raise SystemExit("set ANTHROPIC_API_KEY first (see module docstring)")
