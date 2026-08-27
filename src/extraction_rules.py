@@ -5,7 +5,9 @@ hand-written rules: a junk filter, a company-name dictionary, and keyword
 patterns per relation type.
 
 Scope: only detects universe-universe edges, because the name dictionary
-only knows the 100 universe firms. Edges to outside firms (e.g. PEP ->
+only knows 100 universe firms.
+These firms were selected by the top 100 with highest average daily dollar vol
+over full sample. Edges to outside firms (e.g. PEP ->
 SodaStream) require recognizing arbitrary company names — that is the LLM
 extractor's advantage, and part of the comparison.
 
@@ -14,7 +16,6 @@ Output: data/processed/edges_rules.csv
 """
 
 import re
-from itertools import combinations
 from pathlib import Path
 
 import pandas as pd
@@ -68,7 +69,7 @@ RELATION_PATTERNS = [
 ]
 
 #some names too generic to match alone ("Southern Company" to "southern" which matches "Southern Africa")
-BLOCKED_NAMES = {"southern", "gap", "merch &", "deere &"}
+BLOCKED_NAMES = {"southern", "gap", "merck &", "deere &"}
 NAME_EXCLUSIONS = {
     "MRK": re.compile(r"\s*(kgaa|darmstadt)", re.IGNORECASE),
                       "JNPR": re.compile(r"\s*(pharmaceutical)", re.IGNORECASE),
@@ -89,7 +90,7 @@ def _clean_name(name: str) -> str:
 
 
 def load_name_map() -> dict[str, str]:
-    """lowercase name variant -> ticker, for all universe firms."""
+    """lowercase name variant to ticker, for all universe firms."""
     df = pd.read_csv(NAMES_FILE)
     name_map = {}
     for _, row in df.iterrows():
@@ -104,11 +105,8 @@ def load_name_map() -> dict[str, str]:
 
 def load_short_names() -> dict[str, str]:
     """Two- and three-character names, kept case-sensitive: 'IBM' -> IBM.
-
     These are dropped from load_name_map because lowercasing them creates
-    false matches against common words. Matching them as written recovers
-    12 firms — IBM, GE, J&J, 3M, P&G, CVS, UPS, and others — that headlines
-    almost always refer to by abbreviation.
+    false matches against common words. 
     """
     df = pd.read_csv(NAMES_FILE)
     short = {}
@@ -129,7 +127,6 @@ HYPHEN_PARTNER = re.compile(r"[-/]\s*([A-Z][A-Za-z&.]+)")
 
 def find_firm_mentions(headline: str, name_map: dict[str, str]) -> list[tuple[int, int, str]]:
     """Where each universe firm is mentioned: (start, end, ticker), in order.
-
     Longer names win overlaps, so 'Norfolk Southern' claims its span before
     'Southern' can. Parenthesized tickers like '(MMM)' also count.
     """
@@ -162,9 +159,6 @@ def find_firm_mentions(headline: str, name_map: dict[str, str]) -> list[tuple[in
 
 def is_spoken_for(headline: str, start: int, end: int, mentions) -> bool:
     """True if this firm is hyphen-joined to a company outside the universe.
-
-    'Aetna-Humana' means Humana's deal partner is Aetna, not whichever other
-    universe firm happens to appear later in the headline.
     """
     after = headline[end:end + 30]
     m = HYPHEN_PARTNER.match(after)
