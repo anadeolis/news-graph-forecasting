@@ -2,8 +2,8 @@
 
 Scoring is at the headline level: did the extractor detect a relationship in
 this headline, and if so, is the relation type right? Firm-level matching is
-not used because the labels name companies as written ("Starwood") while the
-rules extractor can only emit universe tickers — the two are not comparable
+not used because the labels name companies as written while the
+rules extractor can only emit universe tickers, the two are not comparable
 at that granularity, and the gap is itself one of the results.
 
 Two panels, because the 45 labels come from two samples that answer
