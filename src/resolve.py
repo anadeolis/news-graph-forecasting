@@ -3,10 +3,6 @@
 The rules extractor emits tickers; the LLM emits names as written in the
 headline ("Marriott International", "Bristol", "J&J"). Comparing the two
 graphs, or building either one, needs the names resolved to tickers.
-
-Matching is word-boundary based and longest-match-wins, the same discipline
-as find_firm_mentions. A naive substring test is not safe here: "GE" appears
-inside "General Dynamics", so a careless resolver maps GE to GD.
 """
 
 import re
@@ -36,8 +32,7 @@ def resolve(name: str, name_map: dict[str, str]) -> str | None:
     """Ticker for this company name, or None if it is outside the universe.
 
     Accepts both directions of partial naming: the headline may write more
-    than the dictionary entry ("Marriott International" vs "Marriott") or
-    less ("Bristol" vs "Bristol-Myers Squibb"). Requires a whole-word match
+    than the dictionary entry or less. Requires a whole-word match
     so short names cannot match inside longer ones.
     """
     text = _clean(name)
