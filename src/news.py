@@ -1,4 +1,4 @@
-"""2: Filter FNSPID news down to the project's firms.
+"""Filter FNSPID news down to this project's firms.
 
 Raw input (data/raw/, not committed):
   fnspid_all_external.csv   FNSPID "All_external" news, ~5.7 GB
@@ -9,7 +9,7 @@ Raw input (data/raw/, not committed):
 Outputs (data/processed/):
   news_rows.parquet   rows tagged with any of the 695 panel tickers
   articles.parquet    one row per article: date, title, list of panel
-                      tickers tagged, n_tickers — stage 3 reads this
+                      tickers tagged, n_tickers
 """
 
 from pathlib import Path
