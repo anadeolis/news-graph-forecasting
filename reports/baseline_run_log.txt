@@ -1,0 +1,80 @@
+panel: 5279 days x 100 stocks (2000-01-03 .. 2020-12-31)
+lookback 1008d, refit every 20d
+
+  AR ...
+    day 0/4271  (0s)
+    day 500/4271  (0s)
+    day 1000/4271  (0s)
+    day 1500/4271  (0s)
+    day 2000/4271  (0s)
+    day 2500/4271  (1s)
+    day 3000/4271  (1s)
+    day 3500/4271  (1s)
+    day 4000/4271  (1s)
+  VAR ...
+    day 0/4271  (0s)
+    day 500/4271  (0s)
+    day 1000/4271  (0s)
+    day 1500/4271  (1s)
+    day 2000/4271  (1s)
+    day 2500/4271  (1s)
+    day 3000/4271  (2s)
+    day 3500/4271  (2s)
+    day 4000/4271  (2s)
+  SparseVAR-LASSO ...
+    day 0/4271  (0s)
+    day 500/4271  (3s)
+    day 1000/4271  (5s)
+    day 1500/4271  (8s)
+    day 2000/4271  (12s)
+    day 2500/4271  (14s)
+    day 3000/4271  (17s)
+    day 3500/4271  (19s)
+    day 4000/4271  (21s)
+  SparseVAR-EN ...
+    day 0/4271  (0s)
+    day 500/4271  (3s)
+    day 1000/4271  (5s)
+    day 1500/4271  (7s)
+    day 2000/4271  (9s)
+    day 2500/4271  (11s)
+    day 3000/4271  (12s)
+    day 3500/4271  (14s)
+    day 4000/4271  (16s)
+  Factor ...
+    day 0/4271  (0s)
+    day 500/4271  (0s)
+    day 1000/4271  (0s)
+    day 1500/4271  (1s)
+    day 2000/4271  (1s)
+    day 2500/4271  (1s)
+    day 3000/4271  (1s)
+    day 3500/4271  (2s)
+    day 4000/4271  (2s)
+  NIRVAR ...
+    day 0/4271  (0s)
+    day 500/4271  (0s)
+    day 1000/4271  (1s)
+    day 1500/4271  (1s)
+    day 2000/4271  (1s)
+    day 2500/4271  (2s)
+    day 3000/4271  (2s)
+    day 3500/4271  (2s)
+    day 4000/4271  (2s)
+
+          model  oos_r2    mse    mae  dir_acc  ann_sharpe  sharpe_p  ppt_bps  hit_ratio
+             AR -0.0004 0.0003 0.0108   0.5081      1.2903    0.0000   2.3278     0.5081
+            VAR -0.1476 0.0004 0.0119   0.5049      1.0656    0.0000   2.0718     0.5049
+SparseVAR-LASSO -0.0024 0.0003 0.0108   0.5067      0.9591    0.0001   1.9904     0.5067
+   SparseVAR-EN -0.0007 0.0003 0.0108   0.5060      0.6892    0.0054   1.5074     0.5060
+         Factor -0.0010 0.0003 0.0108   0.5054      0.5719    0.0187   1.4840     0.5054
+         NIRVAR -0.0185 0.0003 0.0109   0.5037      1.0409    0.0000   1.6165     0.5037
+
+Diebold-Mariano vs AR (negative favours the model, p < 0.05 significant):
+  VAR                  DM =  23.242   p = 0.0000
+  SparseVAR-LASSO      DM =   2.422   p = 0.0154
+  SparseVAR-EN         DM =   0.423   p = 0.6719
+  Factor               DM =   0.658   p = 0.5106
+  NIRVAR               DM =   9.356   p = 0.0000
+
+saved -> /Users/anasantana/Documents/news-graph-forecasting/reports/baseline_results.csv

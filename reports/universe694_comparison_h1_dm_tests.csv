@@ -1,0 +1,5 @@
+model_a,model_b,DM,p_value,verdict
+GraphVAR-news-hard,AR,4.471344642674345,7.772931628569069e-06,model_b better
+GraphVAR-news-hard,GraphVAR-sector-hard,0.3019319068772725,0.7627039720006932,no significant difference
+GraphVAR-news-hard,CorrGraphVAR-hard,2.4782583614856715,0.01320255052418351,model_b better
+VAR,AR,34.13285290873034,0.0,model_b better

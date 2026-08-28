@@ -7,7 +7,7 @@ Created on Thu Aug 20 08:07:45 2026
 
 
 
-Here we run every model on the SAME window (2009-2014, where the knowledge graph
+Here we run every model on the SAME window (2007-2020, where the knowledge graph
 has coverage) so the numbers are directly comparable. Then we can see if the 
 network built from news beats the alternatives 
 

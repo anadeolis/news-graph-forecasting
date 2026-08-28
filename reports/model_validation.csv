@@ -1,0 +1,12 @@
+experiment,model,oos_r2,dir_acc,expected,graph
+1: lead-lag chain,AR,0.0019213087699682108,0.5244444444444445,~0 (no own-lag structure exists),
+1: lead-lag chain,VAR,0.1671763068596882,0.6088888888888889,high (sees cross-firm lags),
+1: lead-lag chain,SparseVAR-LASSO,0.18522390971248837,0.6111111111111112,"high, above VAR (drops noise coefficients)",
+1: lead-lag chain,SparseVAR-EN,0.19400921972454244,0.6111111111111112,"high, above VAR",
+1: lead-lag chain,Factor(k=3),0.003872420359152251,0.5133333333333333,~0 (pairwise links are not a common factor),
+1: lead-lag chain,NIRVAR,0.11209166047919672,0.5622222222222222,"partial (true structure is a chain, not clusters)",
+2: graph quality,AR (no graph),-0.0038029692556027506,0.49833333333333335,baseline,none
+2: graph quality,GraphVAR-hard,0.09737992395564532,0.5425,high,true
+2: graph quality,GraphVAR-soft,0.09969925891814058,0.56,high,true
+2: graph quality,GraphVAR-hard,-0.007107479489100399,0.5,collapses to AR: constraint forbids the useful firms,wrong
+2: graph quality,GraphVAR-soft,0.09400960140560854,0.5525,still works: penalty can be overridden by evidence,wrong
